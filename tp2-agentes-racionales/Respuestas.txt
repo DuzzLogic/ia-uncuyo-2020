@@ -1,0 +1,35 @@
+Aspirador - Inteligencia Artificial I
+Ejercicios C y D
+Desempeño del Agente no aleatorio:
+
+alt text
+
+Desempeño del Agente Aleatorio:
+
+alt text
+
+Ejercicio E
+2.9)
+Considere una versión modificada del entorno de la aspiradora del Ejercicio 2.7, en el que se penalice al agente con un punto en cada movimiento.
+a) ¿Puede un agente reactivo simple ser perfectamente racional en este medio? Explíquese.
+Si el agente no conoce el entorno, no lo creo, ya que un agente reactivo simple no guarda estados anteriores por lo que no podría saber por ejemplo, si está en una esquina,ya que para saberlo debería chocarse con dos lados y nunca sabrá si se choco con un lado anteriormente, ya que no guarda estados, solo reacciona. En caso de que el agente sepa las proporciones del entorno puede saber donde está parado y seguir distintas direcciones.
+
+b) ¿Qué sucedería con un agente reactivo con estado? Diseñe este agente.
+Al tener un estado, podría saber perfectamente si se encuentra en una esquina, por lo que se podría generar un camino. Hay que llevar al agente hasta la esquina superior izquierda, cuando choque con alguna pared (lo guarda como estado) , y luego se choque con otra, es decir, la pared de arriba y la pared de la izquierda, significa que se encuentra en una esquina. Luego empieza a recorrer en filas hasta llegar a la esquina inferior derecha.
+
+c) ¿Cómo se responderían las preguntas a y b si las percepciones proporcionan al agente información sobre el nivel de suciedad/limpieza de todas las cuadrículas del entorno?
+En el primer caso simplemente haría el camino por cada slot sucio sin problemas. El segundo caso sería el mismo o podría ser más eficiente dependiendo de donde aparezca la suciedad.
+
+2.10)
+Considere una versión modificada del entorno de la aspiradora del Ejercicio 2.7, en el que la geografía del entorno (su extensión, límites, y obstáculos) sea desconocida, así como, la disposición inicial de la suciedad. (El agente puede ir hacia arriba, abajo, así como, hacia la derecha y a la izquierda.)
+a) ¿Puede un agente reactivo simple ser perfectamente racional en este medio? Explíquese.
+No lo creo, como dije en el punto 2.9) a) , si desconoce el entorno, es difícil saber qué camino tomará.
+
+b) ¿Puede un agente reactivo simple con una función de agente aleatoria superar a un agente reactivo simple? Diseñe un agente de este tipo y medir su rendimiento en varios medios.
+Dependiendo del tamaño, en matrices sumamente pequeñas, el agente aleatorio puede tener ventaja.
+
+c) ¿Se puede diseñar un entorno en el que el agente con la función aleatoria obtenga una actuación muy pobre? Muestre los resultados.
+Si, los entornos muy grandes pueden provocar rendimientos pobres, en un entorno de 128x128 con un porcentaje de 10% de suciedad, la aspiradora tiene un 0.026% de rendimiento (etapas/puntos).
+
+d) ¿Puede un agente reactivo con estado mejorar los resultados de un agente reactivo simple? Diseñe un agente de este tipo y medir su eficiencia en distintos medios. ¿Se puede diseñar un agente racional de este tipo?
+Yo creo que en éste caso, lograría los mismos resultados.
